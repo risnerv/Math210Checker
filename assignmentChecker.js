@@ -585,10 +585,10 @@ function validCode(sv, assignment)
 
     for(i = 1; i<assignment; i++)
     {
-        validationCode.nextInt(100000,999999);
+        validationCode.nextInt(10000,99999);
     }
 
-    return validationCode.nextInt(100000,999999);
+    return validationCode.nextInt(10000,99999);
 }
 
 //returns sample variance
