@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 8</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.9.4/jstat.min.js"></script>-->
+  <meta charset="UTF-8">
+  <style> 
+  div{
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  .custom-select {
+      width: 75%;
+    }
+  </style>
+  <!-- Link to your JavaScript file -->
+</head>
+<body>
+  <header>
+    <p><center><h1>Assignment 8</h1> 
+  </center></p>
+  </header>
+
+  <main>
+    <div>
+      <center><h2><a href="MainMenu.html">Home</a></h2></center>
+      
+    
+    <form  id="inputFormAssign1">
+        <label for="dataset">Data Set Number:</label>
+        <input type="number" id="dataset" name="dataset" min="1" max="100"><br><br>
+        <label for="school">Section Number:</label>
+        <input type="number" id="school" name="school" min="1" max="1000"><br><br>
+        <label for="year">School Year:</label>
+        <input type="number" id="year" name="year" min="2000" max="2100"><br><br>
+      <h4>Please fill in the following inputs and hit submit. Round to the 4th decimal point.</h4>
+      <br>
+      1: A random sample of 50 people were asked to use both Brand X and Brand Y detergents 
+      for one month and score each detergent from 1 to 10 for satisfaction. Test whether 
+      there was a significant difference in the median satisfaction between the two brands.
+      <label for="Question1"></label>
+      <select id="Question1" name="Question1" class="custom-select">
+        <option value="" disabled selected>Select an option</option>
+        <option value= 1>One Sample T-Test</option>
+        <option value= 2>One Sample Sign Test</option>
+        <option value= 3>Paired T-Test</option>
+        <option value= 4>Paired Sign Test</option>
+        <option value= 5>Independent Samples T-Test</option>
+        <option value= 6>One Way ANOVA</option>
+        <option value= 7>T-Test for Correlation</option>
+        <option value= 8>Binomial Test</option>
+        <option value= 9>Chi-squared Goodness of Fit Test</option>
+        <option value= 10>Chi-squared Contingency Table Test</option></select>
+      <span class="result" id="Q1Result"></span><br><br>
+
+     2: A sample of 2000 school children is tested for learning disabilities 
+      to see if the proportion of school children with learning disabilities 
+      is significantly greater than 20%.
+      <label for="Question2"></label>
+      <select id="Question2" name="Question2" class="custom-select">
+        <option value="" disabled selected>Select an option</option>
+        <option value= 1>One Sample T-Test</option>
+        <option value= 2>One Sample Sign Test</option>
+        <option value= 3>Paired T-Test</option>
+        <option value= 4>Paired Sign Test</option>
+        <option value= 5>Independent Samples T-Test</option>
+        <option value= 6>One Way ANOVA</option>
+        <option value= 7>T-Test for Correlation</option>
+        <option value= 8>Binomial Test</option>
+        <option value= 9>Chi-squared Goodness of Fit Test</option>
+        <option value= 10>Chi-squared Contingency Table Test</option></select>
+      <span class="result" id="Q2Result"></span><br><br>
+
+    3: Random samples of 40 men and 40 women are taken and their political preference 
+    is recorded in order to test whether is a relationship between gender and political affiliation.
+    <label for="Question3"></label>
+      <select id="Question3" name="Question3" class="custom-select">
+        <option value="" disabled selected>Select an option</option>
+        <option value= 1>One Sample T-Test</option>
+        <option value= 2>One Sample Sign Test</option>
+        <option value= 3>Paired T-Test</option>
+        <option value= 4>Paired Sign Test</option>
+        <option value= 5>Independent Samples T-Test</option>
+        <option value= 6>One Way ANOVA</option>
+        <option value= 7>T-Test for Correlation</option>
+        <option value= 8>Binomial Test</option>
+        <option value= 9>Chi-squared Goodness of Fit Test</option>
+        <option value= 10>Chi-squared Contingency Table Test</option></select>
+      <span class="result" id="Q3Result"></span><br><br>
+
+    4: The salaries and number of years of schooling of a random sample of 60 
+    employees were recorded to determine if there is a positive relationship 
+    between salaries and amount of schooling.
+    <label for="Question4"></label>
+      <select id="Question4" name="Question4" class="custom-select">
+        <option value="" disabled selected>Select an option</option>
+        <option value= 1>One Sample T-Test</option>
+        <option value= 2>One Sample Sign Test</option>
+        <option value= 3>Paired T-Test</option>
+        <option value= 4>Paired Sign Test</option>
+        <option value= 5>Independent Samples T-Test</option>
+        <option value= 6>One Way ANOVA</option>
+        <option value= 7>T-Test for Correlation</option>
+        <option value= 8>Binomial Test</option>
+        <option value= 9>Chi-squared Goodness of Fit Test</option>
+        <option value= 10>Chi-squared Contingency Table Test</option></select>
+      <span class="result" id="Q4Result"></span><br><br>
+
+    5: Random samples of 200 individuals from each of Missouri, Arkansas, and Kansas 
+    were taken and their blood pressure was recorded in order to test whether there 
+    was a significant difference in the average blood pressure among the three states.
+    <label for="Question5"></label>
+      <select id="Question5" name="Question5" class="custom-select">
+        <option value="" disabled selected>Select an option</option>
+        <option value= 1>One Sample T-Test</option>
+        <option value= 2>One Sample Sign Test</option>
+        <option value= 3>Paired T-Test</option>
+        <option value= 4>Paired Sign Test</option>
+        <option value= 5>Independent Samples T-Test</option>
+        <option value= 6>One Way ANOVA</option>
+        <option value= 7>T-Test for Correlation</option>
+        <option value= 8>Binomial Test</option>
+        <option value= 9>Chi-squared Goodness of Fit Test</option>
+        <option value= 10>Chi-squared Contingency Table Test</option></select>
+      <span class="result" id="Q5Result"></span><br><br>
+
+    6: A random sample of 200 married couples with both husband and wife working 
+    was taken and their incomes recorded in order to test whether there is a significant 
+    difference in the average income of husbands and wives in double income families.
+    <label for="Question6"></label>
+      <select id="Question6" name="Question6" class="custom-select">
+        <option value="" disabled selected>Select an option</option>
+        <option value= 1>One Sample T-Test</option>
+        <option value= 2>One Sample Sign Test</option>
+        <option value= 3>Paired T-Test</option>
+        <option value= 4>Paired Sign Test</option>
+        <option value= 5>Independent Samples T-Test</option>
+        <option value= 6>One Way ANOVA</option>
+        <option value= 7>T-Test for Correlation</option>
+        <option value= 8>Binomial Test</option>
+        <option value= 9>Chi-squared Goodness of Fit Test</option>
+        <option value= 10>Chi-squared Contingency Table Test</option></select>
+      <span class="result" id="Q6Result"></span><br><br>
+
+    7: A random sample of 400 individuals was taken and their incomes recorded in order to 
+    test whether the average income is significantly greater than $20,000.
+    <label for="Question7"></label>
+      <select id="Question7" name="Question7" class="custom-select">
+        <option value="" disabled selected>Select an option</option>
+        <option value= 1>One Sample T-Test</option>
+        <option value= 2>One Sample Sign Test</option>
+        <option value= 3>Paired T-Test</option>
+        <option value= 4>Paired Sign Test</option>
+        <option value= 5>Independent Samples T-Test</option>
+        <option value= 6>One Way ANOVA</option>
+        <option value= 7>T-Test for Correlation</option>
+        <option value= 8>Binomial Test</option>
+        <option value= 9>Chi-squared Goodness of Fit Test</option>
+        <option value= 10>Chi-squared Contingency Table Test</option></select>
+      <span class="result" id="Q7Result"></span><br><br>
+
+    8: A random sample of 500 males over 50 were asked whether they smoked and 
+    whether they had had a heart attack to determine if there is a relationship 
+    between smoking and heart attacks.
+    <label for="Question8"></label>
+      <select id="Question8" name="Question8" class="custom-select">
+        <option value="" disabled selected>Select an option</option>
+        <option value= 1>One Sample T-Test</option>
+        <option value= 2>One Sample Sign Test</option>
+        <option value= 3>Paired T-Test</option>
+        <option value= 4>Paired Sign Test</option>
+        <option value= 5>Independent Samples T-Test</option>
+        <option value= 6>One Way ANOVA</option>
+        <option value= 7>T-Test for Correlation</option>
+        <option value= 8>Binomial Test</option>
+        <option value= 9>Chi-squared Goodness of Fit Test</option>
+        <option value= 10>Chi-squared Contingency Table Test</option></select>
+      <span class="result" id="Q8Result"></span><br><br>
+
+    9: A random sample of 50 individuals on a low fat diet had their cholesterol 
+    levels checked before and after the diet to determine if the diet 
+    significantly reduced cholesterol levels.
+    <label for="Question9"></label>
+      <select id="Question9" name="Question9" class="custom-select">
+        <option value="" disabled selected>Select an option</option>
+        <option value= 1>One Sample T-Test</option>
+        <option value= 2>One Sample Sign Test</option>
+        <option value= 3>Paired T-Test</option>
+        <option value= 4>Paired Sign Test</option>
+        <option value= 5>Independent Samples T-Test</option>
+        <option value= 6>One Way ANOVA</option>
+        <option value= 7>T-Test for Correlation</option>
+        <option value= 8>Binomial Test</option>
+        <option value= 9>Chi-squared Goodness of Fit Test</option>
+        <option value= 10>Chi-squared Contingency Table Test</option></select>
+      <span class="result" id="Q9Result"></span><br><br>
+
+    10: A random sample of 50 nurses who had a BSN had their annual reviews scores 
+    recorded. A random sample of 50 nurses with only an RN degree also had their 
+    scores recorded. Is there a significant difference in the average review 
+    scores of RN and BSN nurses?
+    <label for="Question10"></label>
+      <select id="Question10" name="Question10" class="custom-select">
+        <option value="" disabled selected>Select an option</option>
+        <option value= 1>One Sample T-Test</option>
+        <option value= 2>One Sample Sign Test</option>
+        <option value= 3>Paired T-Test</option>
+        <option value= 4>Paired Sign Test</option>
+        <option value= 5>Independent Samples T-Test</option>
+        <option value= 6>One Way ANOVA</option>
+        <option value= 7>T-Test for Correlation</option>
+        <option value= 8>Binomial Test</option>
+        <option value= 9>Chi-squared Goodness of Fit Test</option>
+        <option value= 10>Chi-squared Contingency Table Test</option></select>
+      <span class="result" id="Q10Result"></span><br><br>
+      
+      <input type="submit">
+      
+    </form>
+  </div>
+  </main>
+  <pre id="output"></pre>
+  <script src="PRNG.js"></script>
+  <script src="assignmentChecker.js"></script>
+  <script src="formAlg.js"></script>
+
+  <script>
+    // Select DOM elements
+    const form = document.getElementById('inputFormAssign1');
+    const datasetIP = document.getElementById('dataset');
+    const schoolIP = document.getElementById('school');
+    const yearIP = document.getElementById('year');
+    const mean = document.getElementById('mean');
+    const outputDiv = document.getElementById('output');
+    
+
+    // Event listener for form submission
+    form.addEventListener('submit', function(event) {event.preventDefault(); assignment8Alg();});
+</script> 
+
+  <footer>
+  </footer>
+
+</body>
+</html>

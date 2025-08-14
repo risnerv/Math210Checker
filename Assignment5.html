@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 5</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.9.4/jstat.min.js"></script>-->
+  <!-- Link to your JavaScript file -->
+  <style> 
+    div{
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+    .custom-select {
+        width: 75%;
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <center><h1>Assignment 5</h1></center>
+    <nav>
+    </nav>
+  </header>
+
+  <main>
+    <center><h2><a href="MainMenu.html">Home</a></h2></center>
+    <div>
+    
+    <form  id="inputFormAssign1">
+      <label for="dataset">Data Set Number:</label>
+      <input type="number" id="dataset" name="dataset" min="1" max="100"><br><br>
+      <label for="school">Section Number:</label>
+      <input type="number" id="school" name="school" min="1" max="1000"><br><br>
+      <label for="year">School Year:</label>
+      <input type="number" id="year" name="year" min="2000" max="2100"><br><br>
+      <h4>Please fill in the following inputs and hit submit. Round to the 4th decimal point.</h4>
+      <center>Part 1: Paired T-Test</center>
+      <br>
+      Assumptions:
+      <label for="Assumptionsp1"></label>
+      <select id="Assumptionsp1" name="Assumptionsp1">
+        <option value= 1>Random Sample</option>
+        <option value= 2>Random Sample from a normal distribution</option>
+        <option value= 3>Random Sample where the residuals are normal</option>
+        <option value= 4>Random Sample where the differences come from a normal population</option>
+        <option value= 5>Two independent random sample from the normal populations with equal variances</option>
+        <option value= 6>Three independent random sample from normal populations</option></select>
+      <span class="result" id="Assumptionsp1Result"></span><br><br>
+      Hypotheses:
+      <label for="Hypothp1"></label>
+      <select id="Hypothp1" name="Hypothp1">
+        <option value= 1>HO:μ ≤ 77 H1:μ &gt; 77</option>
+        <option value= 2>HO:μ ≥ 77 H1:μ &lt; 77</option>
+        <option value= 3>HO:μ = 77 H1:μ ≠ 77</option>
+        <option value= 4>HO:μ1 ≤ μ2 H1:μ1 &gt; μ2</option>
+        <option value= 5>HO:μ1 ≥ μ2 H1:μ1 &lt; μ2</option>
+        <option value= 6>HO:μ1 = μ2 H1:μ1 ≠ μ2</option>
+        <option value= 7>HO:M ≤ 77 H1:M &gt; 77</option>
+        <option value= 8>HO:M ≥ 77 H1:M &lt; 77</option>
+        <option value= 9>HO:M = 77 H1:M ≠ 77</option>
+        <option value= 10>HO:M1 ≤ M2 H1:M1 &gt; M2</option>
+        <option value= 11>HO:M1 ≥ M2 H1:M1 &lt; M2</option>
+        <option value= 12>HO:M1 = M2 H1:M1 ≠ M2</option>
+        <option value= 13>HO:ρ ≤ 0 H1:ρ &gt; 0</option>
+        <option value= 14>HO:ρ ≥ 0 H1:ρ &lt; 0</option>
+        <option value= 15>HO:ρ = 0 H1:ρ ≠ 0</option>
+        <option value= 15>HO: all three means are equal H1: at least one differs</option></select>
+      <span class="result" id="Hypothp1Result"></span><br><br>
+      
+      Test Statistic:
+      <label for="Teststatp1"></label>
+      <input type="number" id="Teststatp1" name="Teststatp1" step="any"><br>
+      <span class="result" id="Teststatp1Result"></span><br>
+
+      P-Value:
+      <label for="Pvalp1"></label>
+      <input type="number" id="Pvalp1" name="Pvalp1" step="any"><br>
+      <span class="result" id="Pvalp1Result"></span><br>
+
+      Rejection Rule: 
+      <label for="RRp1"></label>
+      <input type="number" id="RRp1" name="RRp1" step="any">
+      <label for="comparep1"></label>
+      <select id="comparep1" name="comparep1">
+        <option value= 1>≤ 0.10</option>
+        <option value= 2>≤ 0.05</option>
+        <option value= 3>≤ 0.01</option></select>
+      <span class="result" id="RRp1Result"></span><br><br>
+
+      Conclusion:
+      <label for="Conp1"></label>
+      <select id="Conp1" name="Conp1">
+        <option value= 1>There is a significant inverse correlation between Temp and KWH</option>
+        <option value= 2>There is not a significant inverse correlation between Temp and KWH</option></select>
+        <span class="result" id="Conp1Result"></span><br><br>
+
+        <br>
+       <center> Part 2: Paired Sign Test</center>
+        <br>
+        Assumptions:
+        <label for="Assumptionsp2"></label>
+        <select id="Assumptionsp2" name="Assumptionsp2">
+          <option value= 1>Random Sample</option>
+          <option value= 2>Random Sample from a normal distribution</option>
+          <option value= 3>Random Sample where the residuals are normal</option>
+          <option value= 4>Random Sample where the differences come from a normal population</option>
+          <option value= 5>Two independent random sample from the normal populations with equal variances</option>
+          <option value= 6>Three independent random sample from normal populations</option></select>
+        <span class="result" id="Assumptionsp2Result"></span><br><br>
+        Hypotheses:
+        <label for="Hypothp2"></label>
+        <select id="Hypothp2" name="Hypothp2">
+          <option value= 1>HO:μ ≤ 77 H1:μ &gt; 77</option>
+          <option value= 2>HO:μ ≥ 77 H1:μ &lt; 77</option>
+          <option value= 3>HO:μ = 77 H1:μ ≠ 77</option>
+          <option value= 4>HO:μ1 ≤ μ2 H1:μ1 &gt; μ2</option>
+          <option value= 5>HO:μ1 ≥ μ2 H1:μ1 &lt; μ2</option>
+          <option value= 6>HO:μ1 = μ2 H1:μ1 ≠ μ2</option>
+          <option value= 7>HO:M ≤ 77 H1:M &gt; 77</option>
+          <option value= 8>HO:M ≥ 77 H1:M &lt; 77</option>
+          <option value= 9>HO:M = 77 H1:M ≠ 77</option>
+          <option value= 10>HO:M1 ≤ M2 H1:M1 &gt; M2</option>
+          <option value= 11>HO:M1 ≥ M2 H1:M1 &lt; M2</option>
+          <option value= 12>HO:M1 = M2 H1:M1 ≠ M2</option>
+          <option value= 13>HO:ρ ≤ 0 H1:ρ &gt; 0</option>
+          <option value= 14>HO:ρ ≥ 0 H1:ρ &lt; 0</option>
+          <option value= 15>HO:ρ = 0 H1:ρ ≠ 0</option>
+          <option value= 15>HO: all three means are equal H1: at least one differs</option></select>
+        <span class="result" id="Hypothp2Result"></span><br><br>
+        
+        Test Statistic:
+        <label for="Teststatp2.1"></label>
+        <input type="number" id="Teststatp2.1" name="Teststatp2.1" step="any">
+        out of 
+        <label for="Teststatp2.2"></label>
+        <input type="number" id="Teststatp2.2" name="Teststatp2.2" step="any">
+        <span class="result" id="Teststatp2Result"></span><br><br>
+  
+        P-Value:
+        <label for="Pvalp2"></label>
+        <input type="number" id="Pvalp2" name="Pvalp2" step="any"><br>
+        <span class="result" id="Pvalp2Result"></span><br>
+  
+        Rejection Rule: 
+        <label for="RRp2"></label>
+        <input type="number" id="RRp2" name="RRp2" step="any">
+        <label for="comparep2"></label>
+        <select id="comparep2" name="comparep2">
+          <option value= 1>≤ 0.10</option>
+          <option value= 2>≤ 0.05</option>
+          <option value= 3>≤ 0.01</option></select>
+        <span class="result" id="RRp2Result"></span><br><br>
+  
+        Conclusion:
+        <label for="Conp2"></label>
+        <select id="Conp2" name="Conp2">
+          <option value= 1>The Median Score is significantly greater than 77</option>
+          <option value= 2>The Median Score is not significantly greater than 77</option></select>
+          <span class="result" id="Conp2Result"></span><br><br>
+
+        <input type="submit">
+      
+    </form>
+  </div>
+  </main>
+  <pre id="output"></pre>
+  <script src="PRNG.js"></script>
+  <script src="assignmentChecker.js"></script>
+  <script src="formAlg.js"></script>
+
+  <script>
+    // Select DOM elements
+    const form = document.getElementById('inputFormAssign1');
+    const datasetIP = document.getElementById('dataset');
+    const schoolIP = document.getElementById('school');
+    const yearIP = document.getElementById('year');
+    const mean = document.getElementById('mean');
+    const outputDiv = document.getElementById('output');
+    
+
+    // Event listener for form submission
+    form.addEventListener('submit', function(event) {event.preventDefault(); assignment5Alg();});
+</script> 
+
+  <footer>
+  </footer>
+
+</body>
+</html>
