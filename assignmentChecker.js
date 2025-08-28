@@ -911,7 +911,7 @@ function assignment2()
     //calc the ninth decile
     returnray[1] = calcPrecentile(scoreData, 0.9);
     //calc median
-    returnray[2] = calcMedian(scoreData);
+    returnray[2] = calcPrecentile(scoreData, 0.5);
     //calc Regression equation and store slope and intercept
     returnray[3] = Math.round(calcRegression(kwhXData, kwhYData)[0]*decP)/decP;
     returnray[4] = Math.round(calcRegression(kwhXData, kwhYData)[1]*decP)/decP;
@@ -951,7 +951,7 @@ function assignment2answers(dataSet, seedvalue)
     //calc the ninth decile
     returnray[1] = calcPrecentile(scoreData, 0.9);
     //calc median
-    returnray[2] = calcMedian(scoreData);
+    returnray[2] = calcPrecentile(scoreData, 0.5);
     //calc Regression equation and store slope and intercept
     returnray[3] = Math.round(calcRegression(kwhXData, kwhYData)[0]*decP)/decP;
     returnray[4] = Math.round(calcRegression(kwhXData, kwhYData)[1]*decP)/decP;
