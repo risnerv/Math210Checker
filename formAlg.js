@@ -601,6 +601,8 @@ function byAssignment(request, assignment, schoolCode, year)
     let myRequest=parseInt(request);
     //console.log(myRequest - 4);
 
+        let counter = 0;
+
     //create a string for the return
     let table ="";
     // if requesting a just the validation codes
@@ -611,12 +613,18 @@ function byAssignment(request, assignment, schoolCode, year)
         {
             //for datasets 1 through 25 add validation code to the return string
             for (let i = 1; i <= 35; i++)
-            {
+            {   
                 //add the dataset number and validation code for the assignment 
                 //to the string calling validCode and add a new line
                 table = table + "Dataset: " + i + " Validation Code: " 
                 + validCode(schoolCode*year*i, assignment) + "\n";
-            }
+                
+                counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
         }
         //if the assignment has not yet been coded return error message
         else  
@@ -635,6 +643,12 @@ function byAssignment(request, assignment, schoolCode, year)
                     //assignment1answers function and then adding a new line
                     table = table + "Dataset: " + i + " Answers: " + 
                     assignment1answers(i,schoolCode*year*i) + "\n"; 
+                         counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                 }
         }
         //if it is the second assignment they are requesting
@@ -646,6 +660,12 @@ function byAssignment(request, assignment, schoolCode, year)
                     //assignment3answers function and then adding a new line
                     table = table + "Dataset: " + i + " Answers: " + 
                     assignment2answers(i,schoolCode*year*i) + "\n"; 
+                         counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                 }
         }
         //if it is the third assignemtn they are requesting
@@ -657,6 +677,12 @@ function byAssignment(request, assignment, schoolCode, year)
                     //assignment3answers function and then adding a new line
                     table = table + "Dataset: " + i + " Answers: " + 
                     assignment3answers(i,schoolCode*year*i) + "\n"; 
+                         counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                 }
         }
 
@@ -669,6 +695,12 @@ function byAssignment(request, assignment, schoolCode, year)
                         //assignment1answers function and then adding a new line
                         table = table + "Dataset: " + i + " Answers: " + 
                         assignment4answers(i,schoolCode*year*i) + "\n"; 
+                             counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                     }
             }
             //if it is the second assignment they are requesting
@@ -680,6 +712,12 @@ function byAssignment(request, assignment, schoolCode, year)
                         //assignment3answers function and then adding a new line
                         table = table + "Dataset: " + i + " Answers: " + 
                         assignment5answers(i,schoolCode*year*i) + "\n"; 
+                             counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                     }
             }
             //if it is the third assignemtn they are requesting
@@ -691,6 +729,12 @@ function byAssignment(request, assignment, schoolCode, year)
                         //assignment3answers function and then adding a new line
                         table = table + "Dataset: " + i + " Answers: " + 
                         assignment6answers(i,schoolCode*year*i) + "\n"; 
+                             counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                     }
             }
             else if (assignment == 7)
@@ -701,6 +745,12 @@ function byAssignment(request, assignment, schoolCode, year)
                             //assignment3answers function and then adding a new line
                             table = table + "Dataset: " + i + " Answers: " + 
                             assignment7answers(i,schoolCode*year*i) + "\n"; 
+                                 counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                         }
                 }
                 else if (assignment == 8)
@@ -710,7 +760,13 @@ function byAssignment(request, assignment, schoolCode, year)
                                 //add the dataset and answers to assignment 3 calling 
                                 //assignment3answers function and then adding a new line
                                 table = table + "Dataset: " + i + " Answers: " + 
-                                assignment8answers(i,schoolCode*year*i) + "\n"; 
+                                assignment8answers(i,schoolCode*year*i) + "\n";
+                                     counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                             }
                     }
             
@@ -732,6 +788,12 @@ function byAssignment(request, assignment, schoolCode, year)
                     table = table + "Dataset: " + i + " Answers: " + 
                     assignment1answers(i,schoolCode*year*i) + " Validation Code: " + 
                     validCode(schoolCode*year*i, assignment) + "\n"; 
+                         counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                 }
         }
         // if for assignment 2
@@ -745,6 +807,12 @@ function byAssignment(request, assignment, schoolCode, year)
                     table = table + "Dataset: " + i + " Answers: " + 
                     assignment2answers(i,schoolCode*year*i) + " Validation Code: " + 
                     validCode(schoolCode*year*i, assignment) + "\n" ;
+                         counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                 }
         }
         // if for assignment 3
@@ -758,6 +826,12 @@ function byAssignment(request, assignment, schoolCode, year)
                     table = table + "Dataset: " + i + " Answers: " + 
                     assignment3answers(i,schoolCode*year*i) + " Validation Code: " + 
                     validCode(schoolCode*year*i, assignment) + "\n" 
+                         counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                 }
         }
         else if (assignment == 6)
@@ -770,6 +844,12 @@ function byAssignment(request, assignment, schoolCode, year)
                         table = table + "Dataset: " + i + " Answers: " + 
                         assignment6answers(i,schoolCode*year*i) + " Validation Code: " + 
                         validCode(schoolCode*year*i, assignment) + "\n"; 
+                             counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                     }
             }
             // if for assignment 2
@@ -783,6 +863,12 @@ function byAssignment(request, assignment, schoolCode, year)
                         table = table + "Dataset: " + i + " Answers: " + 
                         assignment4answers(i,schoolCode*year*i) + " Validation Code: " + 
                         validCode(schoolCode*year*i, assignment) + "\n" ;
+                             counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                     }
             }
             // if for assignment 3
@@ -796,6 +882,12 @@ function byAssignment(request, assignment, schoolCode, year)
                         table = table + "Dataset: " + i + " Answers: " + 
                         assignment5answers(i,schoolCode*year*i) + " Validation Code: " + 
                         validCode(schoolCode*year*i, assignment) + "\n" 
+                             counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                     }
             }
             else if (assignment == 7)
@@ -808,6 +900,12 @@ function byAssignment(request, assignment, schoolCode, year)
                             table = table + "Dataset: " + i + " Answers: " + 
                             assignment7answers(i,schoolCode*year*i) + " Validation Code: " + 
                             validCode(schoolCode*year*i, assignment) + "\n" 
+                                 counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                         }
                 }
                 else if (assignment == 8)
@@ -820,6 +918,12 @@ function byAssignment(request, assignment, schoolCode, year)
                                 table = table + "Dataset: " + i + " Answers: " + 
                                 assignment8answers(i,schoolCode*year*i) + " Validation Code: " + 
                                 validCode(schoolCode*year*i, assignment) + "\n" 
+                                     counter++;
+                if (counter==5)
+                {
+                      counter = 0;
+                      table = table + "\n";
+                }
                             }
                     }
         //if for an assignment not yet coded return message
