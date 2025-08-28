@@ -620,10 +620,11 @@ function byAssignment(request, assignment, schoolCode, year)
                 + validCode(schoolCode*year*i, assignment) + "\n";
                 
                 counter++;
-                if (counter==5)
-                {
-                      counter = 0;
-                      table = table + "\n";
+                        if (counter==5)
+                        {
+                              counter = 0;
+                              table = table + "\n";
+                        }
                 }
         }
         //if the assignment has not yet been coded return error message
