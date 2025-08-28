@@ -141,10 +141,11 @@ function assignment2Alg()
                 document.getElementById('regresAResult').textContent = newData[3] ? 'Valid' : 'Invalid';
             //if the fifth input is correct else if the fifth input is incorrect
                 document.getElementById('regresBResult').textContent = newData[4] ? 'Valid' : 'Invalid';
+                document.getElementById('predResult').textContent = newData[5] ? 'Valid' : 'Invalid';
 
 
         //if all inputs are correct print validation code
-        if(newData[0] && newData[1] && newData[2] && newData[3] && newData[4])
+        if(newData[0] && newData[1] && newData[2] && newData[3] && newData[4] &&newData[5])
         {
             //call validation code to return the correct code for the dataset,
             // school, and year for assignment 2
