@@ -891,7 +891,7 @@ function assignment2()
 {
     //intialize arrays
     let returnray = [] 
-    let correctRay = [false, false, false, false, false] 
+    let correctRay = [false, false, false, false, false, false] 
    
     //retrieve inputs
     const dataSet = parseInt(document.getElementById('dataset').value); 
@@ -901,6 +901,7 @@ function assignment2()
     const userMedian = parseFloat(document.getElementById('median').value);
     const userregA = parseFloat(document.getElementById('regresA').value);
     const userregB = parseFloat(document.getElementById('regresB').value);
+    const userPred = parseFloat(document.getElementById('predict').value);
 
     //get the data for the specific dataset and seed values
     getDataset((seedValue*dataSet), dataSet);
@@ -915,6 +916,7 @@ function assignment2()
     //calc Regression equation and store slope and intercept
     returnray[3] = Math.round(calcRegression(kwhXData, kwhYData)[0]*decP)/decP;
     returnray[4] = Math.round(calcRegression(kwhXData, kwhYData)[1]*decP)/decP;
+    returnray[5] = Math.round((calcRegression(kwhXdata, kwhYdata)[0]*30+calcRegression(kwhXdata, kwhYdata)[1])*decP)/decP;
     
     //if user IQR is correct
     if(Math.abs(userIQ - returnray[0])<0.5/decP)
@@ -931,6 +933,8 @@ function assignment2()
     //if user regression intercept is correct
     if(Math.abs(userregB - returnray[4])<0.5/decP)
         correctRay[4] = true;
+    if(Math.abs(userPred - returnray[5]<0.05/decP)
+        correctRay[5] = true;
 
     //return boolean of correct or not
     return correctRay; 
@@ -955,6 +959,7 @@ function assignment2answers(dataSet, seedvalue)
     //calc Regression equation and store slope and intercept
     returnray[3] = Math.round(calcRegression(kwhXData, kwhYData)[0]*decP)/decP;
     returnray[4] = Math.round(calcRegression(kwhXData, kwhYData)[1]*decP)/decP;
+    returnray[5] = Math.round((calcRegression(kwhXdata, kwhYdata)[0]*30+calcRegression(kwhXdata, kwhYdata)[1])*decP)/decP;
 
     //return correct answers
     return returnray; 
